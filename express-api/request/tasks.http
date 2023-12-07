@@ -1,0 +1,26 @@
+### Create Task
+POST http://localhost:3030/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Carlos Martin",
+    "description": "Soy Carlos Martin"
+}
+
+### List Task 
+GET http://localhost:3030/api/tasks
+
+### Get Task
+GET http://localhost:3030/api/tasks/1
+
+### Update Task
+PUT http://localhost:3030/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Angel Vela",
+    "description": "Soy Angel Vela"
+}
+
+### Delete Task
+DELETE  http://localhost:3030/api/tasks/1
