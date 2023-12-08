@@ -8,6 +8,9 @@ import TaskRoutes from "./tasks/task.routes"
 
 const app = express()
 
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
 database.initialize()
     .then(() => console.log("Database connected"))
     .catch(console.error)
