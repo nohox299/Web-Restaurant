@@ -1,5 +1,9 @@
 import { DataSource } from "typeorm";
-import { Task } from "../entity/Task";
+import { Usuarios } from "../entity/usuarios";
+import { Productos } from "../entity/Productos";
+import { ProductosEnPromocion } from "../entity/ProductosenPromocion";
+import { Compras } from "../entity/Compras";
+import { DetalleDeCompra } from "../entity/DetalladoCompra";
 
 export default new DataSource({
     type: "mysql",
@@ -7,8 +11,8 @@ export default new DataSource({
     port: 4306,
     username: "root",
     password: "",
-    database: "webrestaurant",
-    entities: [Task],
+    database: "testeo",
+    entities: [Usuarios, Productos, ProductosEnPromocion, Compras, DetalleDeCompra],
     synchronize: true,
     logging: false
 })
