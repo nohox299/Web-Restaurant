@@ -1,0 +1,26 @@
+### Create Task
+POST http://localhost:3030/api/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Carlos Martin",
+    "contraseña": "SoyCarlosMartin"
+}
+
+### List Task 
+GET http://localhost:3030/api/usuarios
+
+### Get Task
+GET http://localhost:3030/api/usuarios/6
+
+### Update Task
+PUT http://localhost:3030/api/usuarios/6
+Content-Type: application/json
+
+{
+    "nombre": "Angel Vela",
+    "contraseña": "SoyAngelVela"
+}
+
+### Delete Task
+DELETE  http://localhost:3030/api/usuarios/6
