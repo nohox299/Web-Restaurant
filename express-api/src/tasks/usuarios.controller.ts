@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { Usuarios } from "../entity/usuarios";
+import { Usuarios } from "../entity/Usuarios";
 import { DatabaseRepository } from "../declarations";
 
 export class UsuariosController {

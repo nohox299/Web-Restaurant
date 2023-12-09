@@ -1,7 +1,7 @@
 import database from "../config/database";
 import { NotFound } from "http-errors";
 import { DatabaseRepository, Id, Query } from "../declarations";
-import { Usuarios } from "../entity/usuarios";
+import { Usuarios } from "../entity/Usuarios";
 
 export class UsuariosRepository implements DatabaseRepository<Usuarios> {
     async create(data: Partial<Usuarios>, query?: Query | undefined): Promise<Usuarios> {

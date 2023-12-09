@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { UsuariosController } from "../tasks/Usuarios.controller";
+import { UsuariosController } from "../tasks/usuarios.controller";
 import { UsuariosRepository } from "../tasks/usuarios.repository";
 
 

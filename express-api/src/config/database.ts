@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { Usuarios } from "../entity/usuarios";
+import { Usuarios } from "../entity/Usuarios";
 import { Productos } from "../entity/Productos";
 import { ProductosEnPromocion } from "../entity/ProductosenPromocion";
 import { Compras } from "../entity/Compras";
