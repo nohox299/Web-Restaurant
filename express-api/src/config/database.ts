@@ -7,8 +7,8 @@ import { DetalleDeCompra } from "../entity/DetalladoCompra";
 
 export default new DataSource({
     type: "mysql",
-    host: "localhost",
-    port: 4306,
+    host: "13.59.46.201",
+    port: 3306,
     username: "root",
     password: "",
     database: "testeo",
