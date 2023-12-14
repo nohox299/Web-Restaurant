@@ -9,10 +9,10 @@ export default new DataSource({
     type: "mysql",
     host: "13.59.46.201",
     port: 3306,
-    username: "root",
-    password: "",
+    username: "penegrueso",
+    password: "cabezasuave",
     database: "restaurante",
     entities: [Usuarios, Productos, ProductosEnPromocion, Compras, DetalleDeCompra],
     synchronize: true,
-    logging: false
+    logging: true
 })
