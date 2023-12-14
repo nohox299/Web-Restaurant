@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const productos_controller_1 = require("../tasks/productos.controller");
+const productos_repository_1 = require("../tasks/productos.repository");
+const router = (0, express_1.Router)();
+const controller = new productos_controller_1.ProductosController(new productos_repository_1.ProductosRepository());
+router.post("/productos", controller.create.bind(controller));
+router.get("/productos", controller.list.bind(controller));
+router.get("/productos/:productoId", controller.get.bind(controller));
+router.put("/productos/:productoId", controller.update.bind(controller));
+router.delete("/productos/:productoId", controller.remove.bind(controller));
+exports.default = router;

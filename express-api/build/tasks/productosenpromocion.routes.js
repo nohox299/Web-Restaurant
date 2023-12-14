@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const productoenpromocion_controller_1 = require("../tasks/productoenpromocion.controller");
+const productosenpromocion_repository_1 = require("../tasks/productosenpromocion.repository");
+const router = (0, express_1.Router)();
+const controller = new productoenpromocion_controller_1.ProductosEnPromocionController(new productosenpromocion_repository_1.ProductosEnPromocionRepository());
+router.post("/productosenpromocion", controller.create.bind(controller));
+router.get("/productosenpromocion", controller.list.bind(controller));
+router.get("/productosenpromocion/:productoEnPromocionId", controller.get.bind(controller));
+router.put("/productosenpromocion/:productoEnPromocionId", controller.update.bind(controller));
+router.delete("/productosenpromocion/:productoEnPromocionId", controller.remove.bind(controller));
+exports.default = router;

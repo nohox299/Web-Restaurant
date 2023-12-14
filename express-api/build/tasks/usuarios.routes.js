@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const usuarios_controller_1 = require("../tasks/usuarios.controller");
+const usuarios_repository_1 = require("../tasks/usuarios.repository");
+const router = (0, express_1.Router)();
+const controller = new usuarios_controller_1.UsuariosController(new usuarios_repository_1.UsuariosRepository());
+router.post("/usuarios", controller.create.bind(controller));
+router.get("/usuarios", controller.list.bind(controller));
+router.get("/usuarios/:usuarioId", controller.get.bind(controller));
+router.put("/usuarios/:usuarioId", controller.update.bind(controller));
+router.delete("/usuarios/:usuarioId", controller.remove.bind(controller));
+exports.default = router;

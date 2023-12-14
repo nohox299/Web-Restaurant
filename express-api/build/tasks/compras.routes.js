@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const compras_controller_1 = require("../tasks/compras.controller");
+const compras_repository_1 = require("../tasks/compras.repository");
+const router = (0, express_1.Router)();
+const controller = new compras_controller_1.ComprasController(new compras_repository_1.ComprasRepository());
+router.post("/compras", controller.create.bind(controller));
+router.get("/compras", controller.list.bind(controller));
+router.get("/compras/:compraId", controller.get.bind(controller));
+router.put("/compras/:compraId", controller.update.bind(controller));
+router.delete("/compras/:compraId", controller.remove.bind(controller));
+exports.default = router;
