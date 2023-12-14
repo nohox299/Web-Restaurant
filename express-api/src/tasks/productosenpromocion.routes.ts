@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { ProductosEnPromocionController } from "../tasks/ProductoEnPromocion.controller";
+import { ProductosEnPromocionController } from "../tasks/productoenpromocion.controller";
 import { ProductosEnPromocionRepository } from "../tasks/productosenpromocion.repository";
 
 const router = Router();
