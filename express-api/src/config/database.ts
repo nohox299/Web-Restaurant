@@ -11,7 +11,7 @@ export default new DataSource({
     port: 3306,
     username: "root",
     password: "",
-    database: "testeo",
+    database: "restaurante",
     entities: [Usuarios, Productos, ProductosEnPromocion, Compras, DetalleDeCompra],
     synchronize: true,
     logging: false
